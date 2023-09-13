@@ -1,1 +1,4 @@
-.Hero {}
+.heroSection{
+    top: 120px;
+    z-index: 1;
+}

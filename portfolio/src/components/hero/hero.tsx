@@ -6,7 +6,7 @@ interface HeroProps {}
 
 const Hero: FC<HeroProps> = () => {
   return (
-      <section className={`absolute top-[120px] z-[1]`}>
+      <section className={`absolute ${styles.heroSection}`}>
         <div>
           <h1 className="mb-4 text-3xl font-extrabold dark:text-white md:text-5xl lg:text-6xl">
             Hi, I'm 
