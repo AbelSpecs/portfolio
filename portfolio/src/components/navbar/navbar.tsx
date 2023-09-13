@@ -14,7 +14,7 @@ const Navbar: FC<NavbarProps> = () => {
   }
 
   return (
-    <div className="w-screen dark p-2 text-foreground bg-background flex items-start justify-center fixed z-[1] bg-transparent">
+    <div className={`dark p-2 text-foreground bg-background flex items-start justify-center fixed bg-transparent ${styles.navContainer}`}>
       <Nav>
         <NavbarBrand>
           <Image
