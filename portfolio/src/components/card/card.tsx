@@ -66,32 +66,6 @@ const Card: FC<CardProps> = ({title, icon, id, description, technologies}) => {
       </CardBody>
     </NextCard>
 
-
-    // <NextCard id={id} className="py-4 border-solid border-2 border-white rounded-xl w-96"
-    // isHoverable
-    // onMouseMove={handleMouseMove}
-    // onMouseLeave={handleMouseLeave}
-    // >          
-    // <CardBody className='py-2 justify-center items-left'>
-    // <Image
-    //   alt={name}
-    //   className="object-contain rounded-xl opacity-100"
-    //   src={icon}
-    //   width={360} 
-    // />
-    // <p className="mt-4 text-lg font-bold text-gray-300 text-left">{name}</p>
-    // <p className='mt-4 text-sm text-gray-300 text-left'>{description}</p>
-    // <div className='flex flex-wrap text-gray-300 mt-5 gap-2'>
-    // {
-    //   technologies.map((value, index) => {
-    //     return (
-    //       <p key={index}>#{value}</p>
-    //     )
-    //   })
-    // }
-    // </div>
-    // </CardBody>
-    // </NextCard>
   )
 }
 

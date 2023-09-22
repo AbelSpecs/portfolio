@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styles from './hoc.module.css';
 import { motion } from 'framer-motion';
 
-export const staggerContainer = {
+export const hocContainer = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -21,7 +21,7 @@ interface HocProps {
 const Hoc: FC<HocProps> = ({Component, id}) => {
   return (
     <motion.section
-      variants={staggerContainer}
+      variants={hocContainer}
       initial='hidden'
       whileInView='show'
       viewport={{ once: true, amount: 0.25 }}

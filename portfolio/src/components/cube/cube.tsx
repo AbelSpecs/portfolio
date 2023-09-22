@@ -1,6 +1,7 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, Suspense, useRef, useState } from 'react';
 import styles from './cube.module.css';
 import { useFrame } from '@react-three/fiber';
+import { Color } from 'three';
 
 interface CubeProps {}
 
@@ -22,7 +23,7 @@ const Cube: FC<CubeProps> = () => {
   return (
       <mesh ref={ref} onPointerOver={handlePointer} onPointerOut={handlePointer} onClick={() => {window.location.href = "#about"}}>
         <boxGeometry />
-        <meshStandardMaterial color="white"/>
+        <meshStandardMaterial color={new Color(0xffffff)}/>
       </mesh>
   )
 }

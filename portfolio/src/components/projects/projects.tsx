@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import styles from './projects.module.css';
 import { projects } from '../../text/text';
-import { Card as NextCard, Image, CardBody } from "@nextui-org/react";
 import Card from '../card/card';
+import { motion } from 'framer-motion';
 
 
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = () => {
   return (
-    <>
+    <motion.div>
       <section className='p-3 mx-4'>
         <p className='mt-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400'>
          My work
@@ -18,7 +18,7 @@ const Projects: FC<ProjectsProps> = () => {
           Projects
         </h1>
 
-        <p className='text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400'>
+        <p className={`text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 ${styles.justify}`}>
           This section showcases the projects I work on in my free time. Each project
           is different and can go from a simple app to a more complex application. 
         </p>
@@ -33,7 +33,7 @@ const Projects: FC<ProjectsProps> = () => {
           }
         </div>
       </section>
-    </>
+    </motion.div>
   )
 }
 

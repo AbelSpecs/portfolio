@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, Suspense } from 'react';
 import styles from './experience.module.css';
 import { Card as NextCard, CardBody, CardHeader } from '@nextui-org/react';
 import { experience } from '../../text/text';
@@ -7,6 +7,9 @@ import { Canvas } from '@react-three/fiber';
 import Scene from '../scene/scene';
 import { CameraControls } from '@react-three/drei';
 import Triangle from '../triangle/triangle';
+import { motion } from 'framer-motion';
+import Loader from '../loader/loader';
+
 
 interface CardProps {
   title: string,
@@ -49,7 +52,7 @@ const Experience: FC<ExperienceProps> = () => {
   const isBackground = false;
 
   return (
-    <>
+    <motion.div > 
       <div>
         <p className='mt-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400'>
           What I have done
@@ -72,17 +75,19 @@ const Experience: FC<ExperienceProps> = () => {
           technologies.map(({img}, index) => {
             return (
               <div className='ml-5 w-36' key={index}>
-                <Canvas camera={{zoom: 3}}>
-                  <Scene isBackground={isBackground}/>
-                  <CameraControls truckSpeed={0} dollySpeed={0} minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
-                  <Triangle img={img}/>
+                <Canvas camera={{zoom: 3}} frameloop="demand">
+                  <Suspense fallback={<Loader/>}>
+                    <Scene isBackground={isBackground}/>
+                    <CameraControls truckSpeed={0} dollySpeed={0} minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
+                    <Triangle img={img}/>
+                  </Suspense>
                 </Canvas>
               </div>
             )
           })
         }
       </div>
-    </>
+    </motion.div>
   )
 }
 
