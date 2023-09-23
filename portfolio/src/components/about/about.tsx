@@ -34,10 +34,10 @@ const About: FC<AboutProps> = () => {
           Overview
         </h1>
 
-        <motion.p variants={fadeInLeft} initial={fadeInLeft.hidden} whileInView={fadeInLeft.show} viewport={{once: true}} className={`text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-justify ${styles.justify}`}>
+        <motion.p variants={fadeInLeft} initial={fadeInLeft.hidden} whileInView={fadeInLeft.show} viewport={{once: true}} className={`text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 ${styles.justify}`}>
           I'm a developer with experience in JavaScript, C# and TypeScript, with
-          frameworks like React, Angular and Nodejs, I consider myself a quick learner 
-          and lover of bringing new ideas to life!
+          frameworks like React, Angular and Nodejs, I consider myself a responsable,
+          quick learner, I practice a little everyday to eventually become very powerfull
         </motion.p>
 
         <motion.div variants={fadeInRight} initial={fadeInRight.hidden} whileInView={fadeInRight.show} viewport={{once: true}} className='flex flex-wrap justify-center gap-16 mt-10'>

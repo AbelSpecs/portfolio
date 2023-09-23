@@ -15,7 +15,7 @@ const Triangle: FC<TriangleProps> = ({img}) => {
   const texture = useLoader(TextureLoader, img)
 
   return (
-    <Suspense fallback={<span>AHHHHHHH</span>}>
+    <>
       <mesh>
         <Cone ref={ref} args={[1, 2, 3]} rotation={[0,3.1,0]}>
           <meshPhongMaterial color="gold" />
@@ -26,7 +26,7 @@ const Triangle: FC<TriangleProps> = ({img}) => {
             />
         </Cone>
       </mesh>
-    </Suspense>
+    </>
   )
 }
 
